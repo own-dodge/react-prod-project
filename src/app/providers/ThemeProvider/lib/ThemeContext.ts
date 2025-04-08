@@ -2,11 +2,11 @@ import { createContext } from 'react'
 
 export enum Theme {
     LIGHT = 'normal',
-    DARK = 'dark'
+    DARK = 'dark',
 }
 
 export interface ThemeContextProps {
-    theme?: Theme;
+    theme?: Theme
     setTheme?: (theme: Theme) => void
 }
 
