@@ -1,20 +1,19 @@
-import { Link } from 'react-router-dom'
 import './styles/index.scss'
 import { useTheme } from './providers/ThemeProvider'
 import classNames from 'shared/lib/classNames/classNames'
 import { AppRouter } from './providers/router'
+import { Navbar } from 'widgets/Navbar'
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme()
+    const { theme, toggleTheme } = useTheme()
 
-  return (
-    <div className={classNames('app', {}, [theme])}>
-      <button onClick={toggleTheme}>Theme</button>
-      <Link to="/about">About</Link>
-      <Link to="/">Main</Link>
-      <AppRouter />
-    </div>
-  )
+    return (
+        <div className={classNames('app', {}, [theme])}>
+            <Navbar />
+            <button onClick={toggleTheme}>Theme</button>
+            <AppRouter />
+        </div>
+    )
 }
 
 export default App
