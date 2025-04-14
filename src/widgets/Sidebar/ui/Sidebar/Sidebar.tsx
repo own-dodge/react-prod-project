@@ -2,7 +2,9 @@ import classNames from 'shared/lib/classNames/classNames'
 import cls from './Sidebar.module.scss'
 
 import { useState, type PropsWithChildren } from 'react'
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+import { ThemeSwitcher } from 'features/ThemeSwitcher'
+import { LanguageSwitcher } from 'features/LanguageSwitcher'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 interface SidebarProps {
     className?: string
@@ -23,9 +25,12 @@ export const Sidebar = (props: PropsWithChildren<SidebarProps>) => {
                 className,
             ])}
         >
-            <button onClick={onToggle}>toggle</button>
+            <Button theme={ButtonTheme.CLEAR} onClick={onToggle}>
+                toggle
+            </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
+                <LanguageSwitcher className={cls.lang} />
             </div>
         </div>
     )
