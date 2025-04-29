@@ -1,10 +1,10 @@
 import classNames from 'shared/lib/classNames/classNames'
-import cls from './Sidebar.module.scss'
 
 import { useState, type PropsWithChildren } from 'react'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import { LanguageSwitcher } from 'features/LanguageSwitcher'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import cls from './Sidebar.module.scss'
 
 interface SidebarProps {
     className?: string
