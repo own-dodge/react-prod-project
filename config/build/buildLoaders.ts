@@ -10,6 +10,17 @@ export default function buildLoaders (options: buildOptions): webpack.RuleSetRul
     exclude: /node_modules/
   }
 
+  const babelLoader = {
+    test: /\.(js | jsx | tsx )$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
+
   const cssLoaders = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -42,6 +53,7 @@ export default function buildLoaders (options: buildOptions): webpack.RuleSetRul
   }
 
   return [
+    babelLoader,
     typescriptLoader,
     cssLoaders,
     svgLoader,
