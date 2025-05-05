@@ -21,7 +21,7 @@ export default function buildLoaders (options: buildOptions): webpack.RuleSetRul
     }
   }
 
-  const cssLoaders = {
+  const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
       options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -53,10 +53,10 @@ export default function buildLoaders (options: buildOptions): webpack.RuleSetRul
   }
 
   return [
+    fileLoader,
+    svgLoader,
     babelLoader,
     typescriptLoader,
-    cssLoaders,
-    svgLoader,
-    fileLoader
+    cssLoader,
   ]
 }
