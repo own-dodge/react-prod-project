@@ -2,5 +2,8 @@
   "about": "About",
   "main": "Main",
   "language": "English",
-  "NotFound": "Not Found"
+  "NotFound": "Not Found",
+  "somethingWentWrong": "Something went wrong",
+  "reload": "Reload",
+  "throwError": "throw error"
 }

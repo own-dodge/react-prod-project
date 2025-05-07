@@ -2,5 +2,8 @@
   "about": "О нас",
   "main": "Главная",
   "language": "Русский",
-  "NotFound": "Не найдено"
+  "NotFound": "Не найдено",
+  "somethingWentWrong": "Что -то пошло не так",
+  "reload": "Перезагрузить",
+  "throwError": "бросить ошибку"
 }
