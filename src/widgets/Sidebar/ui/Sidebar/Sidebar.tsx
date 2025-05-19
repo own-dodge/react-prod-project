@@ -21,11 +21,16 @@ export const Sidebar = (props: PropsWithChildren<SidebarProps>) => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
         >
-            <Button theme={ButtonTheme.CLEAR} onClick={onToggle}>
+            <Button
+                data-testid="sidebar-toggle"
+                theme={ButtonTheme.CLEAR}
+                onClick={onToggle}
+            >
                 toggle
             </Button>
             <div className={cls.switchers}>

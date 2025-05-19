@@ -36,8 +36,19 @@ module.exports = {
         'import/extensions': 'off',
         'arrow-body-style': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'error',
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
+        ],
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
     globals: {
         __IS_DEV__: true,
     },
