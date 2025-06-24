@@ -4,6 +4,7 @@ import { useState, type PropsWithChildren } from 'react'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import { LanguageSwitcher } from 'features/LanguageSwitcher'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { useTranslation } from 'react-i18next'
 import cls from './Sidebar.module.scss'
 
 interface SidebarProps {
@@ -12,6 +13,7 @@ interface SidebarProps {
 
 export const Sidebar = (props: PropsWithChildren<SidebarProps>) => {
     const { className } = props
+    const { t } = useTranslation()
 
     const [collapsed, setCollapsed] = useState(false)
 
@@ -31,7 +33,7 @@ export const Sidebar = (props: PropsWithChildren<SidebarProps>) => {
                 theme={ButtonTheme.CLEAR}
                 onClick={onToggle}
             >
-                toggle
+                {t('open')}
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
