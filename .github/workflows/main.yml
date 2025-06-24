@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node: [14, 16]
+                node: [17x]
 
         steps:
             - name: Checkout Commit
