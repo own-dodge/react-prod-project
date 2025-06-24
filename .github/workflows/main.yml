@@ -20,12 +20,12 @@ jobs:
               with:
                   node-version: ${{ matrix.node }}
             - name: installing modules
-              uses: npm install
+              run: npm install
             - name: run prod build
-              uses: npm run build:prod
+              run: npm run build:prod
             - name: run lint ts
-              uses: npm run lint:ts
+              run: npm run lint:ts
             - name: run lint scss
-              uses: npm run lint:scss
+              run: npm run lint:scss
             - name: run unit
-              uses: npm run unit
+              run: npm run unit
